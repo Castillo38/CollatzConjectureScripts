@@ -3,9 +3,13 @@
 #include <cstdint>
 
 #include "ReusableFunctions.h"
+#include <matplot/matplot.h>
+
 
 int main()
 {
+	using namespace matplot;
+
 	uint64_t number = 27;
 	uint64_t modM = 64;
 	std::vector<uint64_t> myVector1;
@@ -17,6 +21,9 @@ int main()
 	myVector2 = modMcollatzValuesUpToReachingToOne(number, modM);
 	printVectorOnConsole(myVector2);
 	
+	plot(myVector1);
+	show();
+
 	/*
 	uint64_t num = 27;
 	uint64_t boundN = 3;
@@ -34,4 +41,5 @@ int main()
 	boundM = modMcollatzStepsToReachToOne(num, boundM);
 	std::cout << std::format("{} ", boundM) << '\n';
 	*/
+	return 0;
 }
