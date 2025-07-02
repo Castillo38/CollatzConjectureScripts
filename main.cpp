@@ -21,7 +21,7 @@ int main()
 	myVector2 = modMcollatzValuesUpToReachingToOne(number, modM);
 	printVectorOnConsole(myVector2);
 	
-	plot(myVector1);
+	plot(myVector2);
 	show();
 
 	/*
